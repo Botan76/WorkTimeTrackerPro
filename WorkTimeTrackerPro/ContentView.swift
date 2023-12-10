@@ -6,19 +6,47 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
+    @State var userisloggedIn = false
+    
+    @StateObject var vm = TimeDifferenceViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        
+        ZStack {
+            VStack {
+                TabView {
+                    
+                    NavigationView {
+                        HomeView(vm: vm)
+                    }.tabItem() {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                    NavigationView {
+                        TrackView(vm: vm)
+                    }
+                    .tabItem() {
+                        Image(systemName: "list.bullet.rectangle.fill")
+                        Text("Tracker")
+                    }
+                    ProfileView()
+                        .tabItem() {
+                            Image(systemName: "person.fill")
+                            Text("Profile")
+                        }
+                }.accentColor(Color.blue)
+
+            }            
         }
-        .padding()
+        
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
