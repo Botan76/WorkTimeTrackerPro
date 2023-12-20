@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CA1B33C2B27A37000375079 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1B33B2B27A37000375079 /* DetailView.swift */; };
+		5CA1B3402B28F3A900375079 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1B33F2B28F3A900375079 /* SignUpView.swift */; };
+		5CA1B3432B2DBFF500375079 /* YourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1B3422B2DBFF500375079 /* YourViewController.swift */; };
 		5CA488D02B0A99850042D965 /* WorkTimeTrackerProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA488CF2B0A99850042D965 /* WorkTimeTrackerProApp.swift */; };
 		5CA488D22B0A99850042D965 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA488D12B0A99850042D965 /* ContentView.swift */; };
 		5CA488D42B0A99880042D965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA488D32B0A99880042D965 /* Assets.xcassets */; };
@@ -69,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CA1B33B2B27A37000375079 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5CA1B33F2B28F3A900375079 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		5CA1B3422B2DBFF500375079 /* YourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourViewController.swift; sourceTree = "<group>"; };
 		5CA488CC2B0A99850042D965 /* WorkTimeTrackerPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkTimeTrackerPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA488CF2B0A99850042D965 /* WorkTimeTrackerProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTimeTrackerProApp.swift; sourceTree = "<group>"; };
 		5CA488D12B0A99850042D965 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -142,6 +148,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CA1B3412B28F42500375079 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5CA4890F2B13FA600042D965 /* StartView.swift */,
+				5CA1B33F2B28F3A900375079 /* SignUpView.swift */,
+				5CA488FA2B0AB6170042D965 /* AuthenticationView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		5CA488C32B0A99850042D965 = {
 			isa = PBXGroup;
 			children = (
@@ -168,11 +184,12 @@
 				5CA488CF2B0A99850042D965 /* WorkTimeTrackerProApp.swift */,
 				5CA488D12B0A99850042D965 /* ContentView.swift */,
 				5CA489072B0C18560042D965 /* HomeView.swift */,
+				5CA1B33B2B27A37000375079 /* DetailView.swift */,
 				5CB279022B188EBF00CAE5E6 /* AddView.swift */,
 				5CA489092B0C18630042D965 /* TrackView.swift */,
+				5CA1B3422B2DBFF500375079 /* YourViewController.swift */,
 				5CA4890B2B0C186A0042D965 /* ProfileView.swift */,
-				5CA488FA2B0AB6170042D965 /* AuthenticationView.swift */,
-				5CA4890F2B13FA600042D965 /* StartView.swift */,
+				5CA1B3412B28F42500375079 /* Auth */,
 				5CA4890D2B0C18700042D965 /* timeDifferences.swift */,
 				5CA4893F2B15303B0042D965 /* GoogleService-Info.plist */,
 				5CA488D32B0A99880042D965 /* Assets.xcassets */,
@@ -373,7 +390,10 @@
 				5CA488D22B0A99850042D965 /* ContentView.swift in Sources */,
 				5CA489082B0C18560042D965 /* HomeView.swift in Sources */,
 				5CB279032B188EBF00CAE5E6 /* AddView.swift in Sources */,
+				5CA1B33C2B27A37000375079 /* DetailView.swift in Sources */,
 				5CA4890A2B0C18630042D965 /* TrackView.swift in Sources */,
+				5CA1B3432B2DBFF500375079 /* YourViewController.swift in Sources */,
+				5CA1B3402B28F3A900375079 /* SignUpView.swift in Sources */,
 				5CA489102B13FA600042D965 /* StartView.swift in Sources */,
 				5CA488D02B0A99850042D965 /* WorkTimeTrackerProApp.swift in Sources */,
 				5CA4890C2B0C186A0042D965 /* ProfileView.swift in Sources */,

@@ -81,7 +81,7 @@ struct AuthenticationView: View {
                     })
                     .foregroundColor(.white)
                     .sheet(isPresented: $isSignUpViewPresented, content: {
-                                        SignUpView() // Replace SignUpView with the actual view for sign up
+                                        SignUpView()
                                     })
                     
                     Spacer()

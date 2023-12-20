@@ -10,6 +10,8 @@ import SwiftUI
 struct AddView: View {
     @ObservedObject var vm: TimeDifferenceViewModel
     @Environment (\.dismiss) var dismiss
+    @State private var note: String = ""
+
     
     var totalDifference: String {
             var totalHours = 0
@@ -79,9 +81,25 @@ struct AddView: View {
             Text("Hour you Work: \(vm.calculateTimeDifference())")
                 .padding(.top)
             
+            TextView(text: $note, placeholder: "Add your notes here...")
+                .frame(maxHeight: 100)
+                .overlay(
+                         RoundedRectangle(cornerRadius: 10)
+                             .stroke(Color.gray, lineWidth: 1)
+                     )
+                .padding()
+            
             Button(action: {
-                vm.addTimeDifference()
+                vm.addTimeDifference(note: note)
                 dismiss()
+                vm.showCheckmark = true
+
+                let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                impactMed.impactOccurred()  //Vibrating
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                    vm.showCheckmark = false
+                                }
             }, label: {
                 Text("Add Time")
                     .foregroundColor(.white)
@@ -89,8 +107,6 @@ struct AddView: View {
                     .background(Color.darkgreen)
                     .cornerRadius(10)
             })
-            
-            
 
             
             
@@ -102,5 +118,64 @@ struct AddView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = TimeDifferenceViewModel()
         AddView(vm: viewModel)
+    }
+}
+
+struct TextView: UIViewRepresentable {
+    @Binding var text: String
+    var placeholder: String
+    
+    func makeUIView(context: Context) -> UITextView {
+        let textView = UITextView()
+        textView.isScrollEnabled = true
+        textView.isEditable = true
+        textView.isUserInteractionEnabled = true
+        textView.text = placeholder
+        textView.textColor = UIColor.placeholderText
+        textView.font = UIFont.systemFont(ofSize: 15)
+        textView.delegate = context.coordinator
+        return textView
+    }
+    
+    func updateUIView(_ uiView: UITextView, context: Context) {
+        if text.isEmpty {
+            uiView.text = placeholder
+            uiView.textColor = UIColor.placeholderText
+        } else {
+            uiView.text = text
+            uiView.textColor = UIColor.label
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(text: $text, placeholder: placeholder)
+    }
+    
+    class Coordinator: NSObject, UITextViewDelegate {
+        @Binding var text: String
+        var placeholder: String
+        
+        init(text: Binding<String>, placeholder: String) {
+            _text = text
+            self.placeholder = placeholder
+        }
+        
+        func textViewDidBeginEditing(_ textView: UITextView) {
+            if textView.text == placeholder {
+                textView.text = ""
+                textView.textColor = UIColor.label
+            }
+        }
+        
+        func textViewDidChange(_ textView: UITextView) {
+            text = textView.text
+        }
+        
+        func textViewDidEndEditing(_ textView: UITextView) {
+            if textView.text.isEmpty {
+                textView.text = placeholder
+                textView.textColor = UIColor.placeholderText
+            }
+        }
     }
 }

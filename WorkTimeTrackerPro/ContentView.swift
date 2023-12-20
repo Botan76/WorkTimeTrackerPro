@@ -10,36 +10,42 @@ import Firebase
 
 struct ContentView: View {
     @State var userisloggedIn = false
-    
+    @State var selectedIndex = 0
     @StateObject var vm = TimeDifferenceViewModel()
     var body: some View {
         
         
         ZStack {
             VStack {
-                TabView {
+                TabView(selection: $selectedIndex) {
                     
                     NavigationView {
                         HomeView(vm: vm)
                     }.tabItem() {
                         Image(systemName: "house.fill")
                         Text("Home")
-                    }
+                    }.tag(0)
                     NavigationView {
                         TrackView(vm: vm)
                     }
                     .tabItem() {
                         Image(systemName: "list.bullet.rectangle.fill")
                         Text("Tracker")
+                    }.tag(1)
+                    NavigationView{
+                        ProfileView()
                     }
-                    ProfileView()
-                        .tabItem() {
-                            Image(systemName: "person.fill")
-                            Text("Profile")
-                        }
+                    .tabItem() {
+                        Image(systemName: "person.fill")
+                        Text("Profile")
+                    }.tag(2)
                 }.accentColor(Color.blue)
-
-            }            
+                 
+                    .onChange(of: selectedIndex) { _ in
+                        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                        impactMed.impactOccurred()
+                    }
+            }
         }
         
     }
