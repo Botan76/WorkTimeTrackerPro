@@ -12,6 +12,7 @@ import Firebase
 struct AuthenticationView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var isSignUpViewPresented = false
     
     
     
@@ -74,12 +75,14 @@ struct AuthenticationView: View {
 
 //Button SignUp
                     Button(action: {
-                        signUp()
+                        isSignUpViewPresented = true
                     }, label: {
                         Text("New here? Sign Up")
                     })
                     .foregroundColor(.white)
-                    
+                    .sheet(isPresented: $isSignUpViewPresented, content: {
+                                        SignUpView() // Replace SignUpView with the actual view for sign up
+                                    })
                     
                     Spacer()
                
