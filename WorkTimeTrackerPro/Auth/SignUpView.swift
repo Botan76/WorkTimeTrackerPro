@@ -45,10 +45,18 @@ struct SignUpView: View {
                 Color.lightgreen.opacity(0.8) // Set the background color here
                     .edgesIgnoringSafeArea(.all)
                 VStack {
+                    HStack {
+                        Text(" Sign Up")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                        .padding()
+                        Spacer()
+                    }
                     TextField("Email", text: $email)
                         .padding(.all, 15)
                         .frame(width: 350, height: 50, alignment: .center)
-                        .background(Color.white.opacity(0.5))
+                        .background(Color.white.opacity(0.3))
                         .cornerRadius(10)
                         .keyboardType(.emailAddress)
                         .padding()
@@ -57,14 +65,14 @@ struct SignUpView: View {
                     SecureField("Password", text: $password)
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 15)
                         .frame(width: 350, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .background(Color.white.opacity(0.5))
+                        .background(Color.white.opacity(0.3))
                         .cornerRadius(10)
                       
                     
                     TextField("Full Name", text: $fullName)
                         .padding(.all, 15)
                         .frame(width: 350, height: 50, alignment: .center)
-                        .background(Color.white.opacity(0.5))
+                        .background(Color.white.opacity(0.3))
                         .cornerRadius(10)
                         .keyboardType(.default)
                         .padding()
@@ -72,7 +80,7 @@ struct SignUpView: View {
                     TextField("Address", text: $address)
                         .padding(.all, 15)
                         .frame(width: 350, height: 50, alignment: .center)
-                        .background(Color.white.opacity(0.5))
+                        .background(Color.white.opacity(0.3))
                         .cornerRadius(10)
                         .keyboardType(.alphabet)
                 
@@ -80,7 +88,7 @@ struct SignUpView: View {
                     TextField("Phone Number", text: $phoneNumber)
                         .padding(.all, 15)
                         .frame(width: 350, height: 50, alignment: .center)
-                        .background(Color.white.opacity(0.5))
+                        .background(Color.white.opacity(0.3))
                         .cornerRadius(10)
                         .keyboardType(.phonePad)
                         .padding()
@@ -94,7 +102,7 @@ struct SignUpView: View {
                             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
                     }
                 }
-            }.navigationTitle("Sign Up")
+            }
         }
     }
     func signUp() {

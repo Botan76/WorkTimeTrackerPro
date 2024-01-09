@@ -10,6 +10,14 @@ import SwiftUI
 struct DetailView: View {
     var difference: TimeDifferenceViewModel.TimeDifference
         @ObservedObject var vm: TimeDifferenceViewModel
+        @State var isChecked: Bool
+    
+    
+    init(difference: TimeDifferenceViewModel.TimeDifference, vm: TimeDifferenceViewModel) {
+        self.difference = difference
+        self.vm = vm
+        _isChecked = State(initialValue: difference.isChecked)
+    }
     
     var body: some View {
         VStack {
@@ -44,7 +52,17 @@ struct DetailView: View {
                 }
             }.padding(.top, 20.0)
             
+            Toggle(isOn: $isChecked) {
+                Text("Mark it")
+            }
+            .padding(.vertical)
+            .padding(.horizontal, 30.0)
+            .onChange(of: isChecked) { newValue in
+                       vm.updateCheckedStatus(for: difference, isChecked: newValue)
+                       
+            }
         Spacer()
+
         }
         Button(action: deleteDifference) {
                         Text("Delete")
@@ -65,7 +83,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = TimeDifferenceViewModel()
-        let difference = TimeDifferenceViewModel.TimeDifference(id: "1", dateFromFirebase: "2023-12-03", timeDifference: "2:00", note: "note here", startTime: "07:00", endTime: "09:00")
+        let difference = TimeDifferenceViewModel.TimeDifference(id: "1", dateFromFirebase: "2023-12-03", timeDifference: "2:00", note: "note here", startTime: "07:00", endTime: "09:00", isChecked: true)
         
         return NavigationView {
             DetailView(difference: difference, vm: viewModel)

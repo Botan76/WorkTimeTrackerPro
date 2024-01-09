@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C69F42D2B34C5AF00054211 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5C69F42C2B34C5AF00054211 /* Lottie */; };
+		5C69F4352B34C82800054211 /* lotties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C69F4342B34C82800054211 /* lotties.swift */; };
+		5C69F4382B35BDF400054211 /* loginanima.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C69F4372B35BDF400054211 /* loginanima.json */; };
+		5C69F43A2B35BE7400054211 /* Animation - 1703186201687.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C69F4392B35BE7400054211 /* Animation - 1703186201687.json */; };
 		5CA1B33C2B27A37000375079 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1B33B2B27A37000375079 /* DetailView.swift */; };
 		5CA1B3402B28F3A900375079 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1B33F2B28F3A900375079 /* SignUpView.swift */; };
 		5CA1B3432B2DBFF500375079 /* YourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA1B3422B2DBFF500375079 /* YourViewController.swift */; };
@@ -72,6 +76,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C69F4342B34C82800054211 /* lotties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lotties.swift; sourceTree = "<group>"; };
+		5C69F4372B35BDF400054211 /* loginanima.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginanima.json; sourceTree = "<group>"; };
+		5C69F4392B35BE7400054211 /* Animation - 1703186201687.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Animation - 1703186201687.json"; sourceTree = "<group>"; };
 		5CA1B33B2B27A37000375079 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		5CA1B33F2B28F3A900375079 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5CA1B3422B2DBFF500375079 /* YourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +123,7 @@
 				5CA489242B152AA30042D965 /* FirebaseAppDistribution-Beta in Frameworks */,
 				5CA489342B152AA30042D965 /* FirebaseInstallations in Frameworks */,
 				5CA4892E2B152AA30042D965 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				5C69F42D2B34C5AF00054211 /* Lottie in Frameworks */,
 				5CA489042B0ABA700042D965 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				5CA489202B152AA30042D965 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				5CA4893A2B152AA30042D965 /* FirebasePerformance in Frameworks */,
@@ -148,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C69F4362B35BDF400054211 /* lotties */ = {
+			isa = PBXGroup;
+			children = (
+				5C69F4392B35BE7400054211 /* Animation - 1703186201687.json */,
+				5C69F4372B35BDF400054211 /* loginanima.json */,
+			);
+			path = lotties;
+			sourceTree = "<group>";
+		};
 		5CA1B3412B28F42500375079 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,9 +203,11 @@
 				5CA489072B0C18560042D965 /* HomeView.swift */,
 				5CA1B33B2B27A37000375079 /* DetailView.swift */,
 				5CB279022B188EBF00CAE5E6 /* AddView.swift */,
+				5C69F4342B34C82800054211 /* lotties.swift */,
 				5CA489092B0C18630042D965 /* TrackView.swift */,
 				5CA1B3422B2DBFF500375079 /* YourViewController.swift */,
 				5CA4890B2B0C186A0042D965 /* ProfileView.swift */,
+				5C69F4362B35BDF400054211 /* lotties */,
 				5CA1B3412B28F42500375079 /* Auth */,
 				5CA4890D2B0C18700042D965 /* timeDifferences.swift */,
 				5CA4893F2B15303B0042D965 /* GoogleService-Info.plist */,
@@ -268,6 +287,7 @@
 				5CA489392B152AA30042D965 /* FirebasePerformance */,
 				5CA4893B2B152AA30042D965 /* FirebaseRemoteConfig */,
 				5CA4893D2B152AA30042D965 /* FirebaseRemoteConfigSwift */,
+				5C69F42C2B34C5AF00054211 /* Lottie */,
 			);
 			productName = WorkTimeTrackerPro;
 			productReference = 5CA488CC2B0A99850042D965 /* WorkTimeTrackerPro.app */;
@@ -343,6 +363,7 @@
 			mainGroup = 5CA488C32B0A99850042D965;
 			packageReferences = (
 				5CA488FE2B0ABA700042D965 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5C69F42B2B34C5AF00054211 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 5CA488CD2B0A99850042D965 /* Products */;
 			projectDirPath = "";
@@ -360,8 +381,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C69F43A2B35BE7400054211 /* Animation - 1703186201687.json in Resources */,
 				5CA488D82B0A99880042D965 /* Preview Assets.xcassets in Resources */,
 				5CA488D42B0A99880042D965 /* Assets.xcassets in Resources */,
+				5C69F4382B35BDF400054211 /* loginanima.json in Resources */,
 				5CA489402B15303B0042D965 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +413,7 @@
 				5CA488D22B0A99850042D965 /* ContentView.swift in Sources */,
 				5CA489082B0C18560042D965 /* HomeView.swift in Sources */,
 				5CB279032B188EBF00CAE5E6 /* AddView.swift in Sources */,
+				5C69F4352B34C82800054211 /* lotties.swift in Sources */,
 				5CA1B33C2B27A37000375079 /* DetailView.swift in Sources */,
 				5CA4890A2B0C18630042D965 /* TrackView.swift in Sources */,
 				5CA1B3432B2DBFF500375079 /* YourViewController.swift in Sources */,
@@ -562,6 +586,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Work Time Tracker Pro";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -570,9 +595,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -580,10 +605,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WorkTimeTrackerPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -600,6 +626,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Work Time Tracker Pro";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -608,9 +635,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -618,10 +645,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.WorkTimeTrackerPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -757,6 +785,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5C69F42B2B34C5AF00054211 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.4;
+			};
+		};
 		5CA488FE2B0ABA700042D965 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -768,6 +804,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5C69F42C2B34C5AF00054211 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C69F42B2B34C5AF00054211 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		5CA488FF2B0ABA700042D965 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5CA488FE2B0ABA700042D965 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

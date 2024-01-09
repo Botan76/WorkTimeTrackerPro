@@ -13,7 +13,9 @@ struct AuthenticationView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var isSignUpViewPresented = false
-    
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+
     
     
     var body: some View {
@@ -27,23 +29,19 @@ struct AuthenticationView: View {
                 Rectangle()
                     .fill(LinearGradient(gradient: Gradient(colors: [Color.lightgreen, Color.darkgreen]), startPoint: .leading, endPoint: .trailing))
                 
-                
-                
                     .background(Color.gray)
                     .frame(width: 375, height: 280)
                     .opacity(0.9)
                     .cornerRadius(18)
                     .blur(radius: 1)
-                    .padding(.top, 230)
+                    .padding(.top, 200)
                 
                 
                 VStack {              //main Stack
-                    Image("logio")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 340, height: 180) //
-                        .padding()
-                    
+                    LottieView(name: "loginanima", loopMode: .loop)
+                        .scaleEffect(0.45)
+                        .frame(height: 220)
+                        .padding(.top)
                     Spacer()
 //two Text Field
                     TextField("Email", text: $email)
@@ -74,6 +72,16 @@ struct AuthenticationView: View {
                     })
 
 //Button SignUp
+
+                    Button(action: {
+                        resetPassword()
+                    }, label: {
+                        Text("Forgot my password?")
+                            .foregroundColor(.white)
+                    })
+
+                    Spacer()
+               
                     Button(action: {
                         isSignUpViewPresented = true
                     }, label: {
@@ -84,16 +92,19 @@ struct AuthenticationView: View {
                                         SignUpView()
                                     })
                     
-                    Spacer()
-               
-                    
-                    
                     
                     
                 }
                 .padding()
 
+            }.alert(isPresented: $showAlert) {
+                Alert(
+                    title: Text("WorK Time Tracker"),
+                    message: Text(alertMessage),
+                    dismissButton: .default(Text("OK"))
+                )
             }
+
 
         }
     }
@@ -107,10 +118,27 @@ struct AuthenticationView: View {
                 }
             }
         }
+    
+    func resetPassword() {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if let error = error {
+                showAlert = true
+                alertMessage = "failed: \(error.localizedDescription)"
+                print("Failed to send password reset email: \(error.localizedDescription)")
+            } else {
+                showAlert = true
+                alertMessage = "Check your mail box to reset your password"
+                print("Password reset email sent successfully.")
+                // Optionally, show a message to the user indicating the password reset email was sent
+            }
+        }
+    }
         
         func signIn() {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let error = error {
+                    showAlert = true
+                    alertMessage = "Sign in failed: \(error.localizedDescription)"
                     print("Sign in failed: \(error.localizedDescription)")
                 } else {
                     print("Sign in successful.")
