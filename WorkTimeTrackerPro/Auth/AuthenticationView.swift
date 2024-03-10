@@ -129,7 +129,6 @@ struct AuthenticationView: View {
                 showAlert = true
                 alertMessage = "Check your mail box to reset your password"
                 print("Password reset email sent successfully.")
-                // Optionally, show a message to the user indicating the password reset email was sent
             }
         }
     }

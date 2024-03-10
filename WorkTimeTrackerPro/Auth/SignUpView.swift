@@ -42,7 +42,7 @@ struct SignUpView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color.lightgreen.opacity(0.8) // Set the background color here
+                Color.lightgreen.opacity(0.8) 
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     HStack {
@@ -123,7 +123,6 @@ struct SignUpView: View {
                 let userRef = Database.database().reference().child("users").child(authResult.user.uid)
                 userRef.setValue(user.toDictionary())
                 
-                // Redirect to another view or perform any other actions
             }
         }
     }

@@ -15,7 +15,6 @@ class DocumentInteractionDelegate: NSObject, UIDocumentInteractionControllerDele
         return UIApplication.shared.windows.first!.rootViewController!
     }
     
-    // Implement other delegate methods if needed
 }
 
 

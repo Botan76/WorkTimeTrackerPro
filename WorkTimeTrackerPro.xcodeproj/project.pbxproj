@@ -54,8 +54,8 @@
 		5CA4893A2B152AA30042D965 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 5CA489392B152AA30042D965 /* FirebasePerformance */; };
 		5CA4893C2B152AA30042D965 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 5CA4893B2B152AA30042D965 /* FirebaseRemoteConfig */; };
 		5CA4893E2B152AA30042D965 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5CA4893D2B152AA30042D965 /* FirebaseRemoteConfigSwift */; };
-		5CA489402B15303B0042D965 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CA4893F2B15303B0042D965 /* GoogleService-Info.plist */; };
 		5CB279032B188EBF00CAE5E6 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB279022B188EBF00CAE5E6 /* AddView.swift */; };
+		5CF96CB12B6D898200B0E8BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CF96CB02B6D898200B0E8BF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +99,8 @@
 		5CA4890B2B0C186A0042D965 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = ../../TimeTracker/TimeTracker/ProfileView.swift; sourceTree = "<group>"; };
 		5CA4890D2B0C18700042D965 /* timeDifferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = timeDifferences.swift; path = ../../TimeTracker/TimeTracker/timeDifferences.swift; sourceTree = "<group>"; };
 		5CA4890F2B13FA600042D965 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
-		5CA4893F2B15303B0042D965 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CB279022B188EBF00CAE5E6 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		5CF96CB02B6D898200B0E8BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,10 +207,10 @@
 				5CA489092B0C18630042D965 /* TrackView.swift */,
 				5CA1B3422B2DBFF500375079 /* YourViewController.swift */,
 				5CA4890B2B0C186A0042D965 /* ProfileView.swift */,
+				5CF96CB02B6D898200B0E8BF /* GoogleService-Info.plist */,
 				5C69F4362B35BDF400054211 /* lotties */,
 				5CA1B3412B28F42500375079 /* Auth */,
 				5CA4890D2B0C18700042D965 /* timeDifferences.swift */,
-				5CA4893F2B15303B0042D965 /* GoogleService-Info.plist */,
 				5CA488D32B0A99880042D965 /* Assets.xcassets */,
 				5CA488D52B0A99880042D965 /* WorkTimeTrackerPro.entitlements */,
 				5CA488D62B0A99880042D965 /* Preview Content */,
@@ -383,9 +383,9 @@
 			files = (
 				5C69F43A2B35BE7400054211 /* Animation - 1703186201687.json in Resources */,
 				5CA488D82B0A99880042D965 /* Preview Assets.xcassets in Resources */,
+				5CF96CB12B6D898200B0E8BF /* GoogleService-Info.plist in Resources */,
 				5CA488D42B0A99880042D965 /* Assets.xcassets in Resources */,
 				5C69F4382B35BDF400054211 /* loginanima.json in Resources */,
-				5CA489402B15303B0042D965 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +580,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WorkTimeTrackerPro/WorkTimeTrackerPro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkTimeTrackerPro/Preview Content\"";
 				DEVELOPMENT_TEAM = KCJY343223;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -601,7 +601,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WorkTimeTrackerPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -620,7 +620,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WorkTimeTrackerPro/WorkTimeTrackerPro.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkTimeTrackerPro/Preview Content\"";
 				DEVELOPMENT_TEAM = KCJY343223;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -641,7 +641,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.WorkTimeTrackerPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
