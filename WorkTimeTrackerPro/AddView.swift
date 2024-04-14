@@ -60,22 +60,24 @@ struct AddView: View {
                 
             }
             
-            
             VStack {
                 HStack {
                     Spacer()
                     Image(systemName:"arrowshape.up")
                     DatePicker("Start Time", selection: $vm.startTime, displayedComponents: .hourAndMinute)
                         .labelsHidden()
-                    
                     Spacer()
                     Image(systemName:"arrowshape.down")
                     DatePicker("End Time", selection: $vm.endTime, displayedComponents: .hourAndMinute)
                         .labelsHidden()
                     Spacer()
-                }.padding(.top)
-                
+                }
+                .padding(.top)
+                .onAppear {
+                    UIDatePicker.appearance().minuteInterval = 15
+                }
             }
+
             
             
             Text("Hour you Work: \(vm.calculateTimeDifference())")
