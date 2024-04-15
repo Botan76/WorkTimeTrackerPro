@@ -100,6 +100,7 @@
 		5CA4890D2B0C18700042D965 /* timeDifferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = timeDifferences.swift; path = ../../TimeTracker/TimeTracker/timeDifferences.swift; sourceTree = "<group>"; };
 		5CA4890F2B13FA600042D965 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		5CB279022B188EBF00CAE5E6 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		5CD4700F2BCC73FD004E6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5CF96CB02B6D898200B0E8BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -198,6 +199,7 @@
 		5CA488CE2B0A99850042D965 /* WorkTimeTrackerPro */ = {
 			isa = PBXGroup;
 			children = (
+				5CD4700F2BCC73FD004E6BB8 /* Info.plist */,
 				5CA488CF2B0A99850042D965 /* WorkTimeTrackerProApp.swift */,
 				5CA488D12B0A99850042D965 /* ContentView.swift */,
 				5CA489072B0C18560042D965 /* HomeView.swift */,
@@ -586,6 +588,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorkTimeTrackerPro/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Work Time Tracker Pro";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -626,6 +629,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorkTimeTrackerPro/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Work Time Tracker Pro";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
